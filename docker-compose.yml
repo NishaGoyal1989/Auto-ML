@@ -1,0 +1,12 @@
+version: '3'
+services:
+   automl-services:
+    container_name: automl-services
+    hostname: automl-services
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #     image: 847993713328.dkr.ecr.ap-southeast-1.amazonaws.com/vvts-node-frontend:%IMAGE_VERSION%
+    ports:
+      - 8503:8501
+    restart: unless-stopped
